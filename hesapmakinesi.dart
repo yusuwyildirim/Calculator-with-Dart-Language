@@ -57,11 +57,15 @@ hataFonksiyonu() {
   print("Hatali deger girdiniz!");
 }
 
+cikisFonksiyonu() {
+  exit(0);
+}
+
 islemFonksiyonu() {
   int islem;
 
   print("Lutfen bir islem seciniz:");
-  print("[1]TOPLAMA\n[2]CIKARMA\n[3]CARPMA\n[4]BOLME");
+  print("[1]TOPLAMA\n[2]CIKARMA\n[3]CARPMA\n[4]BOLME\n[5]CIKIS");
   islem = int.parse(stdin.readLineSync()!);
 
   switch (islem) {
@@ -83,6 +87,10 @@ islemFonksiyonu() {
     case 4:
       bolmeFonksiyonu();
       islemFonksiyonu();
+      break;
+
+    case 5:
+      cikisFonksiyonu();
       break;
 
     default:
